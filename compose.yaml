@@ -1,0 +1,48 @@
+services:
+  # -----------------------------
+  # Production service
+  # -----------------------------
+  prod:
+    build:
+      context: .
+      target: prod
+    container_name: trappa_prod
+    ports:
+      - "3000:3000"
+    environment:
+      NODE_ENV: production
+    restart: unless-stopped
+
+  # -----------------------------
+  # Development service
+  # -----------------------------
+  dev:
+    build:
+      context: .
+      target: build
+    container_name: trappa_dev
+    command: pnpm dev
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - /app/.next
+    environment:
+      NODE_ENV: development
+    restart: unless-stopped
+
+  # -----------------------------
+  # Test service
+  # -----------------------------
+  test:
+    build:
+      context: .
+      target: build
+    container_name: trappa_test
+    command: pnpm test
+    environment:
+      NODE_ENV: test
+    volumes:
+      - .:/app
+      - /app/node_modules
