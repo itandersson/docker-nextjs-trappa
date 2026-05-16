@@ -51,6 +51,9 @@ importers:
       '@types/react-dom':
         specifier: 19.0.4
         version: 19.0.4(@types/react@19.0.12)
+      baseline-browser-mapping:
+        specifier: ^2.10.29
+        version: 2.10.29
       postcss:
         specifier: ^8.5.3
         version: 8.5.3
@@ -1136,6 +1139,11 @@ packages:
     peerDependenciesMeta:
       bare-abort-controller:
         optional: true
+
+  baseline-browser-mapping@2.10.29:
+    resolution: {integrity: sha512-Asa2krT+XTPZINCS+2QcyS8WTkObE77RwkydwF7h6DmnKqbvlalz93m/dnphUyCa6SWSP51VgtEUf2FN+gelFQ==}
+    engines: {node: '>=6.0.0'}
+    hasBin: true
 
   basic-ftp@5.3.1:
     resolution: {integrity: sha512-bopVNp6ugyA150DDuZfPFdt1KZ5a94ZDiwX4hMgZDzF+GttD80lEy8kj98kbyhLXnPvhtIo93mdnLIjpCAeeOw==}
@@ -3245,6 +3253,8 @@ snapshots:
   balanced-match@4.0.4: {}
 
   bare-events@2.8.2: {}
+
+  baseline-browser-mapping@2.10.29: {}
 
   basic-ftp@5.3.1: {}
 
