@@ -21,7 +21,7 @@ export async function Navbar() {
     ...localLinks,
     ...menu.map((item) => ({
       title: item.title,
-      path: item.path || item.url || "/",
+      path: item.path,
     })),
   ];
 
