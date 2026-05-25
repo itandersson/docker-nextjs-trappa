@@ -1,7 +1,4 @@
 services:
-  # -----------------------------
-  # Production service
-  # -----------------------------
   prod:
     build:
       context: .
@@ -13,9 +10,6 @@ services:
       NODE_ENV: production
     restart: unless-stopped
 
-  # -----------------------------
-  # Development service
-  # -----------------------------
   dev:
     build:
       context: .
@@ -30,11 +24,8 @@ services:
       - /app/.next
     environment:
       NODE_ENV: development
-    restart: unless-stopped
+    restart: "no"   # 👈 Viktigt för att undvika port-låsning
 
-  # -----------------------------
-  # Test service
-  # -----------------------------
   test:
     build:
       context: .
