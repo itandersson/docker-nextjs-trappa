@@ -1,3 +1,4 @@
+import { Booking } from "components/layout/booking";
 import Footer from "components/layout/footer";
 
 export const metadata = {
@@ -12,12 +13,10 @@ export default function BookingPage() {
       <p className="mt-4 max-w-2xl text-base text-neutral-600 dark:text-neutral-300">
         Välj en tid som passar dig så återkommer vi med bekräftelse.
       </p>
-      <div className="mt-10 rounded-3xl border border-neutral-200 bg-white p-6 shadow-sm dark:border-neutral-800 dark:bg-neutral-950">
-        <h2 className="text-xl font-semibold">Kontaktinformation</h2>
-        <p className="mt-3 text-sm text-neutral-600 dark:text-neutral-400">
-          Mejla oss eller ring för att boka tid: <strong>076-8482577</strong>.
-        </p>
-      </div>
+
+      {/* Hela formuläret hanteras nu interaktivt inuti Booking-komponenten */}
+      <Booking />
+
       <Footer />
     </main>
   );
