@@ -1,5 +1,13 @@
+import { clsx, type ClassValue } from "clsx";
 import { ReadonlyURLSearchParams } from "next/navigation";
+import { twMerge } from "tailwind-merge";
 
+// --- Shadcn UI hjälpfunktion ---
+export function cn(...inputs: ClassValue[]) {
+  return twMerge(clsx(inputs));
+}
+
+// --- Next.js Commerce hjälpfunktioner ---
 export const baseUrl = process.env.VERCEL_PROJECT_PRODUCTION_URL
   ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
   : "http://localhost:3000";
