@@ -1,4 +1,4 @@
-import { Booking } from "components/layout/booking";
+import { CalendarWithTime } from "@/components/layout/CalendarWithTime";
 import Footer from "components/layout/footer";
 
 export const metadata = {
@@ -14,8 +14,7 @@ export default function BookingPage() {
         Välj en tid som passar dig så återkommer vi med bekräftelse.
       </p>
 
-      {/* Hela formuläret hanteras nu interaktivt inuti Booking-komponenten */}
-      <Booking />
+      <CalendarWithTime />
 
       <Footer />
     </main>
